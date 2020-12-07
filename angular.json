@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "WEATHER-APP"
+    }
+  },
+  "defaultProject": "WEATHER-APP",
+  "cli": {
+    "analytics": "e849f99a-532d-48ed-aff8-0f156ce1aeeb"
+  }
 }
