@@ -1,8 +1,10 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import * as moment from 'moment';
 import 'rxjs';
-import { map, filter, switchMap } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
+
+
 
 
 
@@ -17,6 +19,8 @@ apiKey = 'ecc4744a7bb0cfd9d6982540cf616ca7';
 
 
   constructor(private http: HttpClient) { }
+
+
 
 getWeatherDataByCoords(lat, lon){
   let params = new HttpParams()
@@ -50,6 +54,8 @@ getWeatherForecastDataByCityName(city: string): Observable<any> {
 
 
 }
+
+
 
 
 

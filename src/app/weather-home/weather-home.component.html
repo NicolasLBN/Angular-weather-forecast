@@ -1,4 +1,5 @@
 
+
 <div class="row"> 
     <div class="text-primary">
     <div class="col-md-6 offset-md-3">
@@ -6,14 +7,15 @@
 
             <div class="input-group mt-5">
                 <input class="form-control" type="text" #userInput placeholder="Enter city name">
-                <div class="input-group-append">
+                <div class="input-group-append"></div>
                     <button class="input-group-text btn btn-outline-primary" (click)="getCity(userInput.value)">Chercher</button>
                 </div> 
-            </div>
+            
+        
 
             <h5>Current weather and forecasts in your city...</h5>
             <h2>
-                <div class="badge badge-primary text-wrap" style="width: 12rem;">
+                <div class="badge badge-primary text-wrap">
                     <p class="font-weight-lighter">
                         Weather in {{weather.name}}, {{ weather.sys.country }}
                     </p>
@@ -23,57 +25,60 @@
             </h2>
         </div>
         <div class="col-sm-12"></div>
-        <span class="temp">
-            <img src="assets/sun.jpg"height="10%" width="10%" alt="">
-            {{ weather.main.temp | number: '1.0-0'}} &#176;C
-        </span>
-
         <table class="table table-light table striped table-bordered table-sm">
-            
-
             <tbody>
 
-                <tr>
-                    <td>Weather</td> <td> {{weather.weather[0].description}} <img src="assets/{{ weather.weather[0].icon }}.png" ></td>
+                <tr class="active-row2">
+                    <td class="title_col">Weather</td>
+                    <td class="text-data"> {{weather.weather[0].description}} <img src="assets/{{ weather.weather[0].icon }}.png" >
+                        <span class="temp">
+                            {{ weather.main.temp | number: '1.0-0'}} &#176;C
+                        </span>
+                    </td>
                 </tr>
 
-                <tr>
-                    <td> Humidity </td> 
-                    <td class="table-sucess">
-                        
+                <tr class="active-row">
+                    <td class="title_col"> Humidity </td> 
+                    <td class="text-data">
                             {{weather.main.humidity }}%
-                    
-                        
                     </td>
                 </tr>
                 
-                <tr>
-                    <td>Pressure</td>
-                    <td>
-                        <div class="text-info">
+                <tr class="active-row2">
+                    <td class="title_col">Pressure</td>
+                    <td td class="text-data">
+                        <div class="text-data">
                             {{weather.main.pressure }} hpa
                         </div>
-                          
                     </td>
                 </tr>
 
-                <tr>
-                    <td>Sunrise</td> <td> {{weather.sys.sunrise * 1000 | date: 'H:mm' }} </td>
+                <tr class="active-row">
+                    <td class="title_col">Sunrise</td>
+                    <td class="text-data"> 
+                        {{weather.sys.sunrise * 1000 | date: 'H:mm' }} 
+                    </td>
                 </tr>
 
-                <tr>
-                    <td>Sunset</td> <td> {{weather.sys.sunset * 1000 | date: 'H:mm' }} </td>
+                <tr class="active-row2">
+                    <td class="title_col">Sunset</td> 
+                    <td td class="text-data"> 
+                        {{weather.sys.sunset * 1000 | date: 'H:mm' }} 
+                    </td>
                 </tr>
 
-                <tr>
-                    <td>Geo coords</td> <td> [{{weather.coord.lat }}, {{weather.coord.lon }} ]</td>
+                <tr class="active-row">
+                    <td class="title_col">Geo coords</td>
+                     <td td class="text-data"> 
+                         [{{weather.coord.lat }}, {{weather.coord.lon }} ]
+                     </td>
                 </tr>
-
             </tbody>
         </table>
-
-
     </div>
 </div>
+</div>
+<div>
+    <app-map [lon2]="lon2" [lat2]="lat2"></app-map>
 </div>
 

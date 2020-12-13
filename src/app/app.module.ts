@@ -15,6 +15,11 @@ import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './services/auth-guard.service';
 import { WeatherHomeComponent } from './weather-home/weather-home.component';
 import { ForecastComponent } from './forecast/forecast.component';
+import { QuiSommesNousComponent } from './qui-sommes-nous/qui-sommes-nous.component';
+import { FooterComponent } from './footer/footer.component';
+import { AgmCoreModule } from '@agm/core';
+import { MapComponent } from './map/map.component';
+
 
 
 const appRoutes: Routes = [
@@ -35,7 +40,11 @@ const appRoutes: Routes = [
     SigninComponent,
     SignupComponent,
     WeatherHomeComponent,
-    ForecastComponent
+    ForecastComponent,
+    QuiSommesNousComponent,
+    FooterComponent,
+    MapComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -43,7 +52,11 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+  
+    
+   
+    
   ],
   providers: [AuthService, AuthGuardService],
   bootstrap: [AppComponent]

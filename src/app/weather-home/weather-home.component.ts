@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ElementService } from '../services/element.service';
 
 
@@ -8,9 +8,14 @@ import { ElementService } from '../services/element.service';
   styleUrls: ['./weather-home.component.css']
 })
 export class WeatherHomeComponent implements OnInit {
+  weather;
+
   lon: number;
   lat: number;
-  weather;
+
+  lon2: number;
+  lat2: number; 
+
   zoom: number;
  
 
@@ -41,6 +46,8 @@ export class WeatherHomeComponent implements OnInit {
   getCity(city) {
     this.elementService.getWeatherDataByCityName(city).subscribe((data: any ) => {
       this.weather = data;
+      this.lon2 = this.weather.coord.lon; 
+      this.lat2 = this.weather.coord.lat; 
     })
   }
 
