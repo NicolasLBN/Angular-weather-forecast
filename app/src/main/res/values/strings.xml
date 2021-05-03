@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">DeliRestoNew</string>
+    <string name="home_title">Bienvenue chez DeliResto</string>
+    <string name="home_starters">Entrées</string>
+    <string name="home_dishes">Plats</string>
+    <string name="home_deserts">Desserts</string>
+
+    <string name="starter">Entrées</string>
+    <string name="main">Plats</string>
+    <string name="dessert">Désserts</string>
+    <string name="categoryTitle">test</string>
+
+
+    <string name="BleScanPlay">Play BLE</string>
+    <string name="BleScanPause">Stop BLE</string>
+
+
+    <string name="ble_device_status">Statut: %1$s</string>
+    <string name="ble_device_status_connecting">Connection en cours</string>
+    <string name="ble_device_status_connected">Connecté</string>
+    <string name="ble_device_status_disconnected">déconnecté</string>
+    <string name="ble_device_status_disconnecting">Deconnection en cours</string>
+
+
+</resources>
